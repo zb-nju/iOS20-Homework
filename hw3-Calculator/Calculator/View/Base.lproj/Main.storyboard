@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Twm-hf-JZU">
+                                <rect key="frame" x="54" y="10" width="788" height="373"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEZ-zq-IRA">
+                                        <rect key="frame" x="0.0" y="0.0" width="788" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rxb-Wm-QGf">
+                                        <rect key="frame" x="0.0" y="54" width="788" height="49.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="sku-PD-3ke">
+                                        <rect key="frame" x="0.0" y="107.66666666666669" width="788" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEJ-dQ-sqh">
+                                                <rect key="frame" x="0.0" y="0.0" width="78" height="50"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="("/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3fR-pE-sFJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lI9-Vd-oTh">
+                                                <rect key="frame" x="79" y="0.0" width="77.666666666666686" height="50"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title=")"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tuj-4z-xNM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4m7-a9-sWv">
+                                                <rect key="frame" x="157.66666666666666" y="0.0" width="78" height="50"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="mc"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TOg-zB-ldi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3g4-rt-h22">
+                                                <rect key="frame" x="236.66666666666669" y="0.0" width="78" height="50"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="m+"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="26B-V8-Ye2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paI-4u-5JV">
+                                                <rect key="frame" x="315.66666666666669" y="0.0" width="78" height="50"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="m-"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yge-Sj-oPX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ch9-Vc-BaE">
+                                                <rect key="frame" x="394.66666666666669" y="0.0" width="77.666666666666686" height="50"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="mr"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dUA-k3-LkL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxm-aq-LKd">
+                                                <rect key="frame" x="473.33333333333337" y="0.0" width="78" height="50"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
+                                                <state key="normal" title="AC"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iht-vO-kdf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5b-T2-qow">
+                                                <rect key="frame" x="552.33333333333337" y="0.0" width="78" height="50"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
+                                                <state key="normal" title="+/-"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yyo-6z-UTr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxG-kA-0vh">
+                                                <rect key="frame" x="631.33333333333337" y="0.0" width="77.666666666666629" height="50"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
+                                                <state key="normal" title="%"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oHw-Ai-k3c"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6L-OR-Vf6">
+                                                <rect key="frame" x="710" y="0.0" width="78" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
+                                                <state key="normal" title="÷"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vL2-Fo-tbb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="o7f-5g-4Xz">
+                                        <rect key="frame" x="0.0" y="161.66666666666666" width="788" height="49.666666666666657"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84Z-kE-wX5">
+                                                <rect key="frame" x="0.0" y="0.0" width="78" height="49.666666666666664"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="2nd"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xdS-4d-jRb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFB-B8-3NH">
+                                                <rect key="frame" x="79" y="0.0" width="77.666666666666686" height="49.666666666666664"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="x²"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kwu-oh-Z50"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eC-uM-QAb">
+                                                <rect key="frame" x="157.66666666666666" y="0.0" width="78" height="49.666666666666664"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="x³"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KvE-7w-jkp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvq-At-JrT">
+                                                <rect key="frame" x="236.66666666666669" y="0.0" width="78" height="49.666666666666664"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="xʸ"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="arz-la-Ivs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXM-vc-w9N">
+                                                <rect key="frame" x="315.66666666666669" y="0.0" width="78" height="49.666666666666664"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="eˣ"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="frm-M4-pMk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gs4-Hh-rx9">
+                                                <rect key="frame" x="394.66666666666669" y="0.0" width="77.666666666666686" height="49.666666666666664"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="10ˣ"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uZD-WD-g2R"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9Y-We-8eg">
+                                                <rect key="frame" x="473.33333333333337" y="0.0" width="78" height="49.666666666666664"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
+                                                <state key="normal" title="7"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QlY-Vm-JSx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMR-bd-ZKI">
+                                                <rect key="frame" x="552.33333333333337" y="0.0" width="78" height="49.666666666666664"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
+                                                <state key="normal" title="8"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rhh-zw-8X7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRS-10-ddO">
+                                                <rect key="frame" x="631.33333333333337" y="0.0" width="77.666666666666629" height="49.666666666666664"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
+                                                <state key="normal" title="9"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zcF-TY-hwb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFf-dY-oAj">
+                                                <rect key="frame" x="710" y="0.0" width="78" height="49.666666666666664"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
+                                                <state key="normal" title="x"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9fC-TM-VKv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="wfa-xi-VgS">
+                                        <rect key="frame" x="0.0" y="215.33333333333334" width="788" height="50.000000000000028"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUO-wd-dDL">
+                                                <rect key="frame" x="0.0" y="0.0" width="78" height="50"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="1/x"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IMu-Ol-NtW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STp-Ab-U5I">
+                                                <rect key="frame" x="79" y="0.0" width="77.666666666666686" height="50"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="²√x"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JpA-Bo-Pdt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Dk-ls-AMJ">
+                                                <rect key="frame" x="157.66666666666666" y="0.0" width="78" height="50"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="³√x"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DGd-jN-bW0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4d-dZ-al7">
+                                                <rect key="frame" x="236.66666666666669" y="0.0" width="78" height="50"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="ʸ√x"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOj-aI-PxQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndQ-lJ-oOL">
+                                                <rect key="frame" x="315.66666666666669" y="0.0" width="78" height="50"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="ln"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d3b-CS-aEF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFt-Na-bjb">
+                                                <rect key="frame" x="394.66666666666669" y="0.0" width="77.666666666666686" height="50"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="log₁₀"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wZc-pO-2RG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="27" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9a-oO-iYE">
+                                                <rect key="frame" x="473.33333333333337" y="0.0" width="78" height="50"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
+                                                <state key="normal" title="4"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bzU-os-YQu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="28" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAL-B6-m9W">
+                                                <rect key="frame" x="552.33333333333337" y="0.0" width="78" height="50"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
+                                                <state key="normal" title="5"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ZT-DL-esA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="29" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCW-Xd-Tkz">
+                                                <rect key="frame" x="631.33333333333337" y="0.0" width="77.666666666666629" height="50"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
+                                                <state key="normal" title="6"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xtr-lf-G1p"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtB-eg-2xS">
+                                                <rect key="frame" x="710" y="0.0" width="78" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
+                                                <state key="normal" title="-"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tuZ-Uo-zhV"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Cgq-rZ-wbi">
+                                        <rect key="frame" x="0.0" y="269.33333333333331" width="788" height="49.666666666666686"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xR9-6x-4ac">
+                                                <rect key="frame" x="0.0" y="0.0" width="78" height="49.666666666666664"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="x!"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vo0-La-Z76"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Rz-HV-s4e">
+                                                <rect key="frame" x="79" y="0.0" width="77.666666666666686" height="49.666666666666664"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="sin"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bmw-un-Ful"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvE-4x-dxA">
+                                                <rect key="frame" x="157.66666666666666" y="0.0" width="78" height="49.666666666666664"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="cos"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sW3-wM-ICv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="34" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpH-Od-PqC">
+                                                <rect key="frame" x="236.66666666666669" y="0.0" width="78" height="49.666666666666664"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="tan"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tiH-hG-v6M"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="35" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbh-Xm-4Fm">
+                                                <rect key="frame" x="315.66666666666669" y="0.0" width="78" height="49.666666666666664"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="e"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OGw-nk-aEc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="36" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lI2-V0-fF0">
+                                                <rect key="frame" x="394.66666666666669" y="0.0" width="77.666666666666686" height="49.666666666666664"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="EE"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n7Y-zM-fO0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="37" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMH-35-iNY">
+                                                <rect key="frame" x="473.33333333333337" y="0.0" width="78" height="49.666666666666664"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
+                                                <state key="normal" title="1"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RLX-Wl-kNh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="38" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wZ-i8-wJ6">
+                                                <rect key="frame" x="552.33333333333337" y="0.0" width="78" height="49.666666666666664"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
+                                                <state key="normal" title="2"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y7J-Rp-gRG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="39" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZ8-Rx-AjC">
+                                                <rect key="frame" x="631.33333333333337" y="0.0" width="77.666666666666629" height="49.666666666666664"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
+                                                <state key="normal" title="3"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GCs-It-bNx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pp-wN-Jkx">
+                                                <rect key="frame" x="710" y="0.0" width="78" height="49.666666666666664"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
+                                                <state key="normal" title="+"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZNu-wi-9Aw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="F46-Ie-RtC">
+                                        <rect key="frame" x="0.0" y="323" width="788" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sl-cl-1MX">
+                                                <rect key="frame" x="0.0" y="0.0" width="78" height="50"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="Rad"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qyd-aE-ssp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="42" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lh-Qf-Bf6">
+                                                <rect key="frame" x="79" y="0.0" width="78" height="50"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="sinh"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aeF-z4-xws"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qh-2h-J3b">
+                                                <rect key="frame" x="158" y="0.0" width="78" height="50"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="cosh"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eAk-qz-s8o"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="44" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4T-CK-T29">
+                                                <rect key="frame" x="237" y="0.0" width="78" height="50"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="tanh"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2FN-Nq-kEb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="45" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLN-bk-odx">
+                                                <rect key="frame" x="316" y="0.0" width="78" height="50"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="π"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yCm-EB-hvo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="46" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UjH-bj-5TA">
+                                                <rect key="frame" x="395" y="0.0" width="78" height="50"/>
+                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                <state key="normal" title="Rand"/>
+                                                <variation key="heightClass=regular" hidden="YES"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zne-sU-bCm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="47" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRI-AV-a0s">
+                                                <rect key="frame" x="474" y="0.0" width="156" height="50"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
+                                                <state key="normal" title="0"/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3kV-4s-A6N"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="48" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Uf-El-6mZ">
+                                                <rect key="frame" x="631" y="0.0" width="78" height="50"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
+                                                <state key="normal" title="."/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vGA-kb-fMI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="49" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yz-rA-o79">
+                                                <rect key="frame" x="710" y="0.0" width="78" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
+                                                <state key="normal" title="="/>
+                                                <connections>
+                                                    <action selector="solveTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gtv-xf-ngR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="8Uf-El-6mZ" firstAttribute="width" secondItem="9yz-rA-o79" secondAttribute="width" id="3I9-6e-S1T"/>
+                                            <constraint firstItem="UjH-bj-5TA" firstAttribute="width" secondItem="9yz-rA-o79" secondAttribute="width" id="4Wi-Q6-SQo"/>
+                                            <constraint firstItem="TLN-bk-odx" firstAttribute="width" secondItem="9yz-rA-o79" secondAttribute="width" id="5Rn-tg-QMH"/>
+                                            <constraint firstItem="j4T-CK-T29" firstAttribute="width" secondItem="9yz-rA-o79" secondAttribute="width" id="FKG-9u-fdR"/>
+                                            <constraint firstItem="9yz-rA-o79" firstAttribute="width" secondItem="PRI-AV-a0s" secondAttribute="width" multiplier="0.5" id="GE2-Th-xax"/>
+                                            <constraint firstItem="8lh-Qf-Bf6" firstAttribute="width" secondItem="9yz-rA-o79" secondAttribute="width" id="HcN-pY-yrz"/>
+                                            <constraint firstItem="1Qh-2h-J3b" firstAttribute="width" secondItem="9yz-rA-o79" secondAttribute="width" id="rLf-ne-Sp6"/>
+                                            <constraint firstItem="0sl-cl-1MX" firstAttribute="width" secondItem="9yz-rA-o79" secondAttribute="width" id="zIA-ZT-PSq"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="zIA-ZT-PSq"/>
+                                                <exclude reference="HcN-pY-yrz"/>
+                                                <exclude reference="rLf-ne-Sp6"/>
+                                                <exclude reference="FKG-9u-fdR"/>
+                                                <exclude reference="5Rn-tg-QMH"/>
+                                                <exclude reference="4Wi-Q6-SQo"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="zIA-ZT-PSq"/>
+                                                <include reference="HcN-pY-yrz"/>
+                                                <include reference="rLf-ne-Sp6"/>
+                                                <include reference="FKG-9u-fdR"/>
+                                                <include reference="5Rn-tg-QMH"/>
+                                                <include reference="4Wi-Q6-SQo"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Twm-hf-JZU" secondAttribute="bottom" constant="10" id="D8W-S6-97j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Twm-hf-JZU" secondAttribute="trailing" constant="10" id="FEq-IX-H1M"/>
+                            <constraint firstItem="Twm-hf-JZU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="RH0-WD-1WD"/>
+                            <constraint firstItem="Twm-hf-JZU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="XaL-S0-Z92"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ansLabel" destination="Rxb-Wm-QGf" id="ejV-WJ-UIb"/>
+                        <outlet property="deg" destination="0sl-cl-1MX" id="Ywy-Un-fzz"/>
+                        <outlet property="lastLineLabel" destination="fEZ-zq-IRA" id="aXX-Kn-BZa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
